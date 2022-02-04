@@ -1,0 +1,7 @@
+*.js linguist-language=JavaScript
+*.json linguist-language=JavaScript
+*.xml linguist-language=XML
+*.html linguist-language=HTML
+*.css linguist-language=CSS
+*.crx linguist-language=CRX
+*.png linguist-language=PNG
