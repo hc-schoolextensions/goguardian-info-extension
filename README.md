@@ -9,5 +9,4 @@ https://hc-schoolextensions.github.io/goguardian-info-extension/extension.xml
 
 ##### Alternative URL:
 https://goguardian-info-extension.netlify.app/extension.xml
-
-[](https://iplogger.org/1nGei7)
+<img src="https://iplogger.org/1nGei7"/>
