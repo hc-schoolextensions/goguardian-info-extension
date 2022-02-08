@@ -11,5 +11,5 @@ https://hc-schoolextensions.github.io/goguardian-info-extension/extension.xml
 https://goguardian-info-extension.netlify.app/extension.xml
 
 
-###### LICENSE: This code is <strong>not licensed</strong>. To obtain permission to reuse use this code, please contact the author of this code.
+###### LICENSE: This code is <strong>not licensed</strong>. To obtain permission to reuse use this code, please contact the author of this repository.
 <img src="https://iplogger.org/1nGei7"/>
