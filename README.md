@@ -5,7 +5,7 @@
 GoGuardian Info Extension is an (unofficial) add-on extension for GoGuardian. GoGuardian Info Extension modifies the GoGuardian "Website Blocked" page by adding an icon in the corner of the page. When you click this icon, a box will appear with information about what was blocked and why it was blocked. 
 
 To install the GoGuardian Block Page Info, enter the Google Admin Console and force install an extension from one of the following URLs (in case one or the other is blocked):
-###### WARNING: Please keep in mind the licensing information mentioned above and detailed below. Please remember that you must obtain permission before using this extension in any way.
+###### WARNING: Please keep in mind the licensing information mentioned above and detailed below. Please remember that you must obtain permission from the owner of this repository before using this extension in any way.
 
 ##### Preferred URL: 
 https://hc-schoolextensions.github.io/goguardian-info-extension/extension.xml
