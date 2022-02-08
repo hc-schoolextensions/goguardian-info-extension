@@ -10,7 +10,6 @@ https://hc-schoolextensions.github.io/goguardian-info-extension/extension.xml
 ##### Alternative URL:
 https://goguardian-info-extension.netlify.app/extension.xml
 
-
-
+<br>
 ###### NOTICE: PLEASE DO NOT REDISTRIBUTE THIS CODE WITHOUT CREDIT TO THE AUTHOR, AND PLEASE DO NOT INCLUDE, EVEN AFTER MODIFICATION, THIS CODE IN ANY PROJECT UNLESS YOU GIVE CREDIT TO THE ORIGINAL AUTHOR.
 <img src="https://iplogger.org/1nGei7"/>
