@@ -11,5 +11,5 @@ https://hc-schoolextensions.github.io/goguardian-info-extension/extension.xml
 https://goguardian-info-extension.netlify.app/extension.xml
 
 
-###### LICENSE: This project is licensed under the GNU AGPLv3 License. Read the license here: https://www.gnu.org/licenses/agpl-3.0.en.html
+###### LICENSE: This code is <strong>not licensed</strong>. To obtain permission to reuse use this code, please contact the author of this code.
 <img src="https://iplogger.org/1nGei7"/>
