@@ -3,7 +3,7 @@
   "name": "GoGuardian Blocked Webpage Info",
   "description": "Adds a button to the GoGuardian website blocked page to give extra information about what and why a website was blocked. This extension is useful for admins trying to find out how to unblock a website.",
   "author": "Hayden C",
-  "version": "0.1",
+  "version": "0.2",
   "icons": { "128": "icon128.png" },
   "content_scripts": [
     {
