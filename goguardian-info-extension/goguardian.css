@@ -19,6 +19,7 @@
     padding: 10px;
     min-height: 50px;
     border-radius: 10px;
+    overflow-wrap: break-word;
 }
 
 p#data {
@@ -45,7 +46,8 @@ p#data {
 
 @media screen and (min-width: 450px){
     #info {
-        width: 450px;
+        min-width: 450px;
+        max-width: 95%;
     }
     
     #infobutton {
