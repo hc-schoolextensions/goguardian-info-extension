@@ -7,3 +7,5 @@ http://goguardian-info-extension.pages.dev/extension.xml
 
 
 ##### Extension ID: mafcmjondekoipeoibmcdimamdogljoa
+<br><br>
+&copy; Copyright 2022 [@hc-schoolextensions](https://github.com/hc-schoolextensions '@hc-schoolextensions')
