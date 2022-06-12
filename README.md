@@ -8,4 +8,4 @@ http://goguardian-info-extension.pages.dev/extension.xml
 
 ##### Extension ID: mafcmjondekoipeoibmcdimamdogljoa
 <br><br>
-&copy; Copyright 2022 [@hc025](https://github.com/hc025 '@hc025')
+&copy; Copyright 2022 [@hc205](https://github.com/hc025 '@hc205')
