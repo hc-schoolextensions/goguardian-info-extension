@@ -27,8 +27,23 @@ p#data {
     font-weight: 400;
 }
 
+#prefix,
+#innerdatacontainer strong,
+svg,
+br {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 #container {
     font-family: 'Roboto', sans-serif;
+}
+
+#innerdatacontainer {
+    font-size: 16.5px;
+    line-height: 23.5px;
 }
 
 #closeicon {
@@ -38,25 +53,36 @@ p#data {
 }
 
 #prefix {
-    text-decoration: underline;
     text-align: center;
+    font-size: 24px;
     font-weight: 500 !important;
     color: black;
+    display: block;
+    line-height: 35px;
+    border-bottom: 2px solid black;
+    -webkit-margin-before: 0em;
+    margin-block-start: 0em;
+    -webkit-margin-after: 0.5em;
+    margin-block-end: 0.5em;
+    -webkit-margin-start: 0px;
+    margin-inline-start: 0px;
+    -webkit-margin-end: 0px;
+    margin-inline-end: 0px;
 }
 
-@media screen and (min-width: 450px){
+@media screen and (min-width: 450px) {
     #info {
         min-width: 450px;
         max-width: 95%;
     }
-    
+
     #infobutton {
         left: 25px;
         top: 25px;
     }
 }
 
-@media screen and (max-width: 449px){
+@media screen and (max-width: 449px) {
     #info {
         width: 95%;
     }
@@ -67,9 +93,32 @@ p#data {
     }
 }
 
-@media screen and (max-width: 264px){
+@media screen and (max-width: 264px) {
     #closeicon {
         top: 5px;
         right: 5px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+
+    div#innercontainer,
+    p#data,
+    div#info,
+    #info strong {
+        color: rgb(218, 218, 218);
+        background-color: rgb(37, 37, 37);
+    }
+
+    div#info {
+        border: 2px solid rgb(138, 138, 138);
+    }
+
+    div#info svg {
+        fill: rgb(218, 218, 218);
+    }
+
+    #prefix {
+        border-bottom: 2px solid rgb(218, 218, 218);
     }
 }
