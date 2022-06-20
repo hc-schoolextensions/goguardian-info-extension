@@ -1,3 +1,34 @@
+var ctx = new URLSearchParams(atob(new URLSearchParams(location.search).get('ctx')));
+const ctxprops = {
+    oi: "orgID",
+    ou: "originalURL",
+    st: "sourceType",
+    rs: "reason",
+    sci: "siteCategoryID",
+    api: "adminPolicyID",
+    afi: "adminFilterID",
+    pfi: "parentFilterID",
+    x3rpi: "x3ReportPublicID",
+    tsi: "teacherSceneID",
+    tsfi: "teacherSceneFilterID",
+    tsans: "teacherSessionAdminNames",
+    v: "v"
+};
+const rsprops = {
+    BlockWebProxies: "BlockWebProxies",
+    BLOCK_WEB_PROXIES: "BlockWebProxies",
+    BLOCK_DIRECT_IP_ACCESS: "BlockDirectIPAccess",
+    BLOCK_CONSUMER_ACCOUNTS: "BlockConsumerAccounts",
+    ADMIN_SITE_FILTER: "AdminSiteFilter",
+    ADMIN_SITE_CATEGORY_FILTER: "AdminSiteCategoryFilter",
+    ADMIN_SAFE_MODE: "AdminSafeMode",
+    PARENT_SITE_FILTER: "ParentSiteFilter",
+    PARENT_PAUSE: "ParentPause",
+    PARENT_SCHEDULED_PAUSE: "ParentScheduledPause",
+    X3_REPORT: "X3Report",
+    TEACHER_SCENE: "TeacherScene",
+    UNKNOWN: "Unknown"
+}
 var container = document.createElement('div');
 container.innerHTML = `<div id="innercontainer">
 <div id="infobutton">
@@ -12,60 +43,18 @@ container.innerHTML = `<div id="innercontainer">
 </div>`;
 container.id = "container";
 document.body.appendChild(container);
-
-document.getElementById('infobutton').addEventListener('click', function () {
-    if (document.getElementById('info').style.display != "none") {
-        document.getElementById('info').style.display = "none";
-    } else {
-        document.getElementById('info').style.display = "block";
-    }
+var infobutton = document.getElementById('infobutton');
+var infodiv = document.getElementById('info');
+var closeicon = document.getElementById('closeicon');
+var dataP = document.getElementById('data');
+var tmpdata = '';
+infobutton.addEventListener('click', function () {
+    infodiv.style.display = infodiv.style.display != 'none' ? 'none' : 'block';
 });
-
-document.getElementById('closeicon').addEventListener('click', function () {
-    document.getElementById('info').style.display = "none";
+closeicon.addEventListener('click', function () {
+    infodiv.style.display = 'none';
 });
-
-var ctxdata = new URLSearchParams(location.search);
-var ctxdataencoded = ctxdata.get('ctx');
-var ctxdatadecoded = window.atob(ctxdataencoded);
-var ctxdataurlsearchparams = new URLSearchParams(ctxdatadecoded);
-var afitxt = ctxdataurlsearchparams.get('afi');
-var afi = "";
-if (afitxt != null) {
-    afi = `<strong>Admin Filter ID: </strong>${ctxdataurlsearchparams.get('afi')}<br>`;
+for (var pair of ctx.entries()) {
+    tmpdata += `<strong>${ctxprops[pair[0]] ? ctxprops[pair[0]] : pair[0]}: </strong>${pair[0] == 'ou' ? decodeURI(pair[1]) : pair[0] == 'rs' ? rsprops[pair[1]] : pair[1]}<br>`;
 }
-var apitxt = ctxdataurlsearchparams.get('api');
-var api = "";
-if (apitxt != null) {
-    api = `<strong>API ID: </strong>${ctxdataurlsearchparams.get('api')}<br>`;
-}
-var tsitext = ctxdataurlsearchparams.get('tsi');
-var tsi = "";
-if (tsitext != null) {
-    tsi = `<strong>Teacher Scene ID: </strong>${ctxdataurlsearchparams.get('tsi')}<br>`;
-}
-var organizationid = `<strong>Orgaization ID: </strong>${ctxdataurlsearchparams.get('oi')}<br>`;
-var blockedurl = `<strong>Blocked URL: </strong>${decodeURI(ctxdataurlsearchparams.get('ou'))}<br>`;
-
-var blockedreasonone = ctxdataurlsearchparams.get('rs');
-var blockedreason;
-var categoryid;
-if (blockedreasonone == "ADMIN_SITE_CATEGORY_FILTER") {
-    categoryid = `<strong>Category ID: </strong>${ctxdataurlsearchparams.get('sci')}<br>`;
-    blockedreason = "<strong>Blocked Reason: </strong>GoGuardian Admin Site Categoty Filter Lists<br>";
-} else if (blockedreasonone == "ADMIN_SITE_FILTER") {
-    blockedreason = "<strong>Blocked Reason: </strong>GoGuardian Admin Custom Site Filter List<br>";
-} else if (blockedreasonone == "BLOCK_CONSUMER_ACCOUNTS") {
-    blockedreason = "<strong>Blocked Reason: </strong>GoGuardian Admin Block Consumer Accounts<br>";
-} else if (blockedreasonone == "TEACHER_SCENE") {
-    blockedreason = "<strong>Blocked Reason: </strong>Teacher Scene<br>";
-} else {
-    blockedreason = `<strong>Blocked Reason: </strong>${blockedreasonone}<br>`;
-}
-
-var browser = `<strong>Browser: </strong>${ctxdataurlsearchparams.get('st')}<br>`;
-var priority = `<strong>Priority: </strong>${ctxdataurlsearchparams.get('v')}`;
-var prefix = "<p id='prefix' style='font-weight: 500;'><strong style='font-weight: bold;'>GoGuardian Blocked Page Info</strong></p>"
-var full;
-full = `${prefix}<div id="innerdatacontainer">${afi}${api}${organizationid}${blockedurl}${blockedreason}${tsi}${categoryid == undefined ? '' : categoryid}${browser}${priority}</div>`;
-document.getElementById('data').innerHTML = full;
+dataP.innerHTML = `<p id="prefix" style="font-weight: 500;"><strong style="font-weight: bold;">GoGuardian Blocked Page Info</strong></p><div id="innerdatacontainer">${tmpdata}</div>`;

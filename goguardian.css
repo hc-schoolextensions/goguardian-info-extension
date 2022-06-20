@@ -101,7 +101,6 @@ br {
 }
 
 @media (prefers-color-scheme: dark) {
-
     div#innercontainer,
     p#data,
     div#info,
