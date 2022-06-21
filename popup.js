@@ -43,7 +43,7 @@ const rsprops = {
 }
 
 function showdata(taburl) {
-    var ctx = new URLSearchParams(atob(new URLSearchParams(taburl.split('?')[1]).get('ctx')));
+    var ctx = new URLSearchParams(atob(decodeURI(new URLSearchParams(taburl.split('?')[1]).get('ctx'))));
     var tmpdata = '';
     for (var pair of ctx.entries()) {
         tmpdata += `<strong>${ctxprops[pair[0]] ? ctxprops[pair[0]] : pair[0]}: </strong>${pair[0] == 'ou' ? decodeURI(pair[1]) : pair[0] == 'rs' ? rsprops[pair[1]] : pair[1]}<br>`;

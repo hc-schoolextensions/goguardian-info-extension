@@ -1,4 +1,4 @@
-var ctx = new URLSearchParams(atob(new URLSearchParams(location.search).get('ctx')));
+var ctx = new URLSearchParams(atob(decodeURI(new URLSearchParams(location.search).get('ctx'))));
 const ctxprops = {
     oi: "orgID",
     ou: "originalURL",
