@@ -4,9 +4,9 @@ GoGuardian Info extension is an add-on extension for GoGuardian. GoGuardian Info
 
 To install the extension, use the Google Admin Console and the data below:
 
-##### Installation URL: `https://goguardian-info-extension.pages.dev/extension.xml`
+##### Installation URL: ```https://goguardian-info-extension.pages.dev/extension.xml```
 
-##### Extension ID: `mafcmjondekoipeoibmcdimamdogljoa`
+##### Extension ID: ```mafcmjondekoipeoibmcdimamdogljoa```
 <br>
 
 ## Notice:
